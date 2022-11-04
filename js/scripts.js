@@ -21,7 +21,7 @@ return cost
 
 Pizza.prototype.findCostToppings = function (cost) {
 let newCost
-if (this.toppings.includes("sausage") && this.toppings.includes("pepperoni")) {
+if(this.toppings.includes("sausage") && this.toppings.includes("pepperoni")) {
   let newCost = cost += 3;
   return newCost;
 }else if (this.toppings.includes("sausage")) {
@@ -39,6 +39,7 @@ return newCost;
 
 //User Interface Logic
 
+
 function getSelected() {
 const selectedSize = document.getElementById("size-option").value
 pizza.size = selectedSize;
@@ -46,7 +47,7 @@ const selectedToppings = document.querySelectorAll("input[name=topping-option]:c
   for (var i = 0; i < selectedToppings.length; i++) {
     if (selectedToppings[i].checked) {
         pizza.toppings.push(selectedToppings[i].value);
-    } 
+    }
   }
 }
 
@@ -58,7 +59,7 @@ let finalCost = pizza.findCostToppings(sizeCost);
 document.getElementById("price").innerText = finalCost
 document.getElementById("finalPrice").removeAttribute("class");
 pizza.toppings = []
-}
+} 
 
 function newOrder() {
   document.getElementById("finalPrice").setAttribute("class", "hidden");
