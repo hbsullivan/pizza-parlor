@@ -55,9 +55,15 @@ Expected Output: 13
 
 Test: "It should add 5 to the price if a medium pizza is selected"
 Code:
-const pizza = new Pizza(, "medium)
+const pizza = new Pizza(, "medium")
 pizza.findCost();
 Expected Output: 15
+
+Test: "It should add 10 to the price if a medium pizza is selected"
+Code:
+const pizza = new Pizza(, "large")
+pizza.findCost();
+Expected Output: 20
 ```
 ## Known Bugs
 

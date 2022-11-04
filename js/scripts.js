@@ -12,11 +12,11 @@ if (this.size.includes("small")) {
   return cost;
 }else if (this.size.includes("medium")) {
   return cost += 5
+
+}else if (this.size.includes("large")) {
+  return cost += 10
 }
-// }else if (this.size.includes("large")) {
-//   return cost += 10
-// }
-// return cost
+return cost
 }
 
 Pizza.prototype.findCostToppings = function (cost) {
