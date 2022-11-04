@@ -63,6 +63,12 @@ pizza.toppings = []
 function newOrder() {
   document.getElementById("finalPrice").setAttribute("class", "hidden");
   document.getElementById("size-option").value = "small";
+  const selectedToppings = document.querySelectorAll("input[name=topping-option]:checked");
+  for (var i = 0; i < selectedToppings.length; i++) {
+    if (selectedToppings[i].checked) {
+        selectedToppings[i].checked = false
+    } 
+  }
 }
 
 
