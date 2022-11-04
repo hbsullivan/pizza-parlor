@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
+  <title>Pizza Parlor</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Henry's Pizza Haven</h1>
+      <h3>Please order one of our delicious pizzas below</h3>
+    </div>
+    <form id="order-form">
+      <div class="toppings">
+        <p>Please select your toppings:</p>
+        <label>
+          <input type="checkbox" name="topping-option" value="sausage">
+          Sausage
+        </label><br>
+        <label>
+          <input type="checkbox" name="topping-option" value="pepperoni">
+          Pepperoni
+        </label><br>
+      </div><br><br>
+      <div class="size">
+        <p>Please select your size:</p>
+        <select id="size-option">
+          <option value="1">Small</option>
+          <option value="2">Medium</option>
+          <option value="3">Large</option>
+        </select>
+      </div>
+    </form>
+    <div class="hidden">
+        <p id="price"></p>
+    </div>
+  </div>
+</body>
+</html>
