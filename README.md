@@ -33,37 +33,47 @@ Test: "It should return a Pizza object with two properties for toppings and size
 Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
 Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
-Describe: Pizza.prototype.finCost()
 
-Test: "It should add $1 to price if sausage is selected
-Code: 
-const pizza = new Pizza("sausage", );
-pizza.findCost()
-Expected Output: 11
+Describe: Pizza.prototype.finCostSize()
 
-Test: "It should add $2 to price if pepperoni is selected"
-Code: 
-const pizza = new Pizza("pepperoni", )
-pizza.findCost();
-Expected Output: 12
-
-Test: "It should add $3 to the price if both pepperoni and sausage are selected"
-Code: 
-const pizza = new Pizza(["pepperoni", "sausage"])
-pizza.findCost();
-Expected Output: 13
+Test: "It should add 0 to the price if a small pizza is selected"
+Code:
+const pizza = new Pizza(, "small")
+pizza.findCostSize();
+Expected Output: 10
 
 Test: "It should add 5 to the price if a medium pizza is selected"
 Code:
 const pizza = new Pizza(, "medium")
-pizza.findCost();
+pizza.findCostSize();
 Expected Output: 15
 
 Test: "It should add 10 to the price if a medium pizza is selected"
 Code:
 const pizza = new Pizza(, "large")
-pizza.findCost();
+pizza.findCostSize();
 Expected Output: 20
+
+
+Describe: Pizza.prototype.findCostToppings()
+
+Test: "It should add $1 to price if sausage is selected
+Code: 
+const pizza = new Pizza("sausage", );
+pizza.findCostToppings()
+Expected Output: 11
+
+Test: "It should add $2 to price if pepperoni is selected"
+Code: 
+const pizza = new Pizza("pepperoni", )
+pizza.findCostToppings();
+Expected Output: 12
+
+Test: "It should add $3 to the price if both pepperoni and sausage are selected"
+Code: 
+const pizza = new Pizza(["pepperoni", "sausage"])
+pizza.findCostToppings();
+Expected Output: 13
 ```
 ## Known Bugs
 
