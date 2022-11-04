@@ -35,3 +35,8 @@ body{
   text-align: center;
   padding: 20px;
 }
+
+#pizza-pic{
+  height: 100px;
+  width: 100px;
+}
