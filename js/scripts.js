@@ -21,18 +21,30 @@ return cost
 
 Pizza.prototype.findCostToppings = function (cost) {
 let newCost
-if(this.toppings.includes("sausage") && this.toppings.includes("pepperoni")) {
+if(this.toppings.includes("sausage") && this.toppings.includes("pepperoni") && this.toppings.includes("veggies")) {
+  let newCost = cost += 3.5;
+  return newCost.toFixed(2)
+}else if (this.toppings.includes("sausage") && this.toppings.includes("pepperoni")){
   let newCost = cost += 3;
-  return newCost;
+  return newCost.toFixed(2);
+}else if (this.toppings.includes("sausage") && this.toppings.includes("veggies")){
+  let newCost = cost += 1.5;
+  return newCost.toFixed(2);
+}else if (this.toppings.includes("veggies") && this.toppings.includes("pepperoni")){
+  let newCost = cost += 2.5;
+  return newCost.toFixed(2);
+}else if (this.toppings.includes("veggies")) {
+  let newCost = cost += .5;
+  return newCost.toFixed(2);
 }else if (this.toppings.includes("sausage")) {
   let newCost = cost += 1;
-  return newCost;
+  return newCost.toFixed(2);
 }else if (this.toppings.includes("pepperoni")) {
   let newCost = cost += 2;
-  return newCost;
+  return newCost.toFixed(2);
 }else if (this.toppings.includes("no-toppings")) {
   let newCost = cost += 0;
-  return newCost;
+  return newCost.toFixed(2);
 }
 return newCost;
 }
@@ -51,9 +63,9 @@ const selectedToppings = document.querySelectorAll("input[name=topping-option]:c
   }
 }
 
-function errorMessage() {
-  document.getElementById("error").removeAttribute("class");
-}
+// function errorMessage() {
+//   document.getElementById("error").removeAttribute("class");
+// }
 
 function handleSubmit(event) {
 event.preventDefault();

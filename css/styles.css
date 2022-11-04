@@ -3,11 +3,11 @@
 }
 
 #final-price {
-font-size: larger;
-text-align: center;
-color: #FFF1D7;
-background-color: #BB3E00;
-padding: 20px;
+  font-size: 35px;
+  text-align: center;
+  color: #FFF1D7;
+  background-color: #BB3E00;
+  padding: 20px;
 }
 
 .error {
@@ -20,6 +20,7 @@ padding: 20px;
 
 body{ 
   color: #FFF1D7;
+  font-family: monospace;
   background-color: #FFF1D7;
   background-image: url(https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg);
   background-repeat: no-repeat;
@@ -32,4 +33,5 @@ body{
 #order-form{
   background-color: #5F8D37;
   text-align: center;
+  padding: 20px;
 }
