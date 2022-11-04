@@ -2,6 +2,28 @@
   display: none;
 }
 
+#final-price {
+font-size: larger;
+text-align: center;
+color: #FFF1D7;
+background-color: #5F8D37;
+}
+
 .error {
   display: none;
+}
+
+.jumbotron {
+  background-color: #BB3E00
+}
+
+body{ 
+  color: #FFF1D7;
+  background-color: #FFF1D7;
+  background-image: url(img/pizza.webp)
+}
+
+#order-form{
+  background-color: #5F8D37;
+  text-align: center;
 }

@@ -46,9 +46,13 @@ pizza.size = selectedSize;
 const selectedToppings = document.querySelectorAll("input[name=topping-option]:checked");
   for (var i = 0; i < selectedToppings.length; i++) {
     if (selectedToppings[i].checked) {
-        pizza.toppings.push(selectedToppings[i].value);
-    }
+      pizza.toppings.push(selectedToppings[i].value);
+    } 
   }
+}
+
+function errorMessage() {
+  document.getElementById("error").removeAttribute("class");
 }
 
 function handleSubmit(event) {
@@ -57,12 +61,12 @@ getSelected();
 let sizeCost = pizza.findCostSize();
 let finalCost = pizza.findCostToppings(sizeCost);
 document.getElementById("price").innerText = finalCost
-document.getElementById("finalPrice").removeAttribute("class");
+document.getElementById("final-price").removeAttribute("class");
 pizza.toppings = []
 } 
 
 function newOrder() {
-  document.getElementById("finalPrice").setAttribute("class", "hidden");
+  document.getElementById("final-price").setAttribute("class", "hidden");
   document.getElementById("size-option").value = "small";
   const selectedToppings = document.querySelectorAll("input[name=topping-option]:checked");
   for (var i = 0; i < selectedToppings.length; i++) {
