@@ -52,6 +52,12 @@ Code:
 const pizza = new Pizza(["pepperoni", "sausage"])
 pizza.findCost();
 Expected Output: $13
+
+Test: "It should add 0 to the price if a small pizza is selected"
+Code:
+const pizza = new Pizza(, "small")
+pizza.findCost();
+Expected Output: 10
 ```
 ## Known Bugs
 
