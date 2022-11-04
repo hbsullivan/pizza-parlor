@@ -30,6 +30,9 @@ if (this.toppings.includes("sausage") && this.toppings.includes("pepperoni")) {
 }else if (this.toppings.includes("pepperoni")) {
   let newCost = cost += 2;
   return newCost;
+}else if (this.toppings.includes("no-toppings")) {
+  let newCost = cost += 0;
+  return newCost;
 }
 return newCost;
 }
@@ -43,7 +46,7 @@ const selectedToppings = document.querySelectorAll("input[name=topping-option]:c
   for (var i = 0; i < selectedToppings.length; i++) {
     if (selectedToppings[i].checked) {
         pizza.toppings.push(selectedToppings[i].value);
-    }
+    } 
   }
 }
 
@@ -52,12 +55,18 @@ event.preventDefault();
 getSelected();
 let sizeCost = pizza.findCostSize();
 let finalCost = pizza.findCostToppings(sizeCost);
-console.log(finalCost);
 document.getElementById("price").innerText = finalCost
 document.getElementById("finalPrice").removeAttribute("class");
+pizza.toppings = []
+}
+
+function newOrder() {
+  document.getElementById("finalPrice").setAttribute("class", "hidden");
+  document.getElementById("size-option").value = "small";
 }
 
 
 window.addEventListener("load", function(){
   document.getElementById("order-form").addEventListener("submit", handleSubmit);
+  document.getElementById("new-order").addEventListener("click", newOrder)
 })

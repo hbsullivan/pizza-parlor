@@ -15,6 +15,11 @@
     <form id="order-form">
       <div class="toppings">
         <p>Please select your toppings:</p>
+        <p class="error">You must select a topping</p>
+        <label>
+          <input type="checkbox" name="topping-option" value="no-toppings">
+            No Toppings
+        </label><br>
         <label>
           <input type="checkbox" name="topping-option" value="sausage">
             Sausage
@@ -36,6 +41,7 @@
     </form>
     <div class="hidden" id="finalPrice">
       <p>You owe $<span id="price"></span></p>
+      <button type="button" class="btn btn-success" id="new-order">New Order</button>
     </div>
   </div>
 </body>
