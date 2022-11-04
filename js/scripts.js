@@ -20,14 +20,18 @@ return cost
 }
 
 Pizza.prototype.findCostToppings = function (cost) {
+let newCost
 if (this.toppings.includes("sausage") && this.toppings.includes("pepperoni")) {
-  return cost += 3;
+  let newCost = cost += 3;
+  return newCost;
 }else if (this.toppings.includes("sausage")) {
-  return cost += 1;
+  let newCost = cost += 1;
+  return newCost;
 }else if (this.toppings.includes("pepperoni")) {
-  return cost +=2;
+  let newCost = cost += 2;
+  return newCost;
 }
-
+return newCost;
 }
 
 

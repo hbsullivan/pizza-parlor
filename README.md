@@ -60,19 +60,19 @@ Describe: Pizza.prototype.findCostToppings()
 Test: "It should add $1 to price if sausage is selected
 Code: 
 const pizza = new Pizza("sausage", );
-pizza.findCostToppings()
+pizza.findCostToppings(10)
 Expected Output: 11
 
 Test: "It should add $2 to price if pepperoni is selected"
 Code: 
 const pizza = new Pizza("pepperoni", )
-pizza.findCostToppings();
+pizza.findCostToppings(10);
 Expected Output: 12
 
 Test: "It should add $3 to the price if both pepperoni and sausage are selected"
 Code: 
 const pizza = new Pizza(["pepperoni", "sausage"])
-pizza.findCostToppings();
+pizza.findCostToppings(10);
 Expected Output: 13
 ```
 ## Known Bugs
