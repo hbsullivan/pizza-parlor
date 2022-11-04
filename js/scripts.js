@@ -36,4 +36,28 @@ return newCost;
 
 //User Interface Logic
 
+function getSelected() {
+const selectedSize = document.getElementById("size-option").value
+pizza.size = selectedSize;
+const selectedToppings = document.querySelectorAll("input[name=topping-option]:checked");
+  for (var i = 0; i < selectedToppings.length; i++) {
+    if (selectedToppings[i].checked) {
+        pizza.toppings.push(selectedToppings[i].value);
+    }
+  }
+}
 
+function handleSubmit(event) {
+event.preventDefault();
+getSelected();
+let sizeCost = pizza.findCostSize();
+let finalCost = pizza.findCostToppings(sizeCost);
+console.log(finalCost);
+document.getElementById("price").innerText = finalCost
+document.getElementById("finalPrice").removeAttribute("class");
+}
+
+
+window.addEventListener("load", function(){
+  document.getElementById("order-form").addEventListener("submit", handleSubmit);
+})

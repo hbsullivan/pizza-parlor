@@ -17,24 +17,25 @@
         <p>Please select your toppings:</p>
         <label>
           <input type="checkbox" name="topping-option" value="sausage">
-          Sausage
+            Sausage
         </label><br>
         <label>
           <input type="checkbox" name="topping-option" value="pepperoni">
-          Pepperoni
+            Pepperoni
         </label><br>
       </div><br><br>
       <div class="size">
         <p>Please select your size:</p>
         <select id="size-option">
-          <option value="1">Small</option>
-          <option value="2">Medium</option>
-          <option value="3">Large</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
         </select>
-      </div>
+      </div><br><br>
+      <button type="submit" class="btn btn-warning" id="place-order">Place Order</button>
     </form>
-    <div class="hidden">
-        <p id="price"></p>
+    <div class="hidden" id="finalPrice">
+      <p>You owe $<span id="price"></span></p>
     </div>
   </div>
 </body>
