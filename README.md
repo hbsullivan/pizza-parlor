@@ -37,10 +37,15 @@ Describe: Pizza.prototype.finCost()
 
 Test: "It should add $1 to price if sausage is selected
 Code: 
-const pizza = new Pizza("sausage", small);
+const pizza = new Pizza("sausage", );
 pizza.findCost()
-Expected Output: $11
+Expected Output: 11
 
+Test: "It should add $2 to price if pepperoni is selected"
+Code: 
+const pizza = new Pizza("pepperoni", )
+pizza.findCost();
+Expected Output: 12
 ```
 ## Known Bugs
 
