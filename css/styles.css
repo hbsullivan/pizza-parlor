@@ -6,7 +6,8 @@
 font-size: larger;
 text-align: center;
 color: #FFF1D7;
-background-color: #5F8D37;
+background-color: #BB3E00;
+padding: 20px;
 }
 
 .error {
@@ -20,7 +21,12 @@ background-color: #5F8D37;
 body{ 
   color: #FFF1D7;
   background-color: #FFF1D7;
-  background-image: url(img/pizza.webp)
+  background-image: url(https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
 }
 
 #order-form{
