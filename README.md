@@ -51,13 +51,13 @@ Test: "It should add $3 to the price if both pepperoni and sausage are selected"
 Code: 
 const pizza = new Pizza(["pepperoni", "sausage"])
 pizza.findCost();
-Expected Output: $13
+Expected Output: 13
 
-Test: "It should add 0 to the price if a small pizza is selected"
+Test: "It should add 5 to the price if a medium pizza is selected"
 Code:
-const pizza = new Pizza(, "small")
+const pizza = new Pizza(, "medium)
 pizza.findCost();
-Expected Output: 10
+Expected Output: 15
 ```
 ## Known Bugs
 

@@ -8,6 +8,12 @@ function Pizza(toppings, size) {
 
 Pizza.prototype.findCost = function(toppings, size) {
 let cost = 10;
+if (this.size.includes("small")) {
+  return cost;
+}else if (this.size.includes("medium")) {
+  return cost += 5
+}
+
 if (this.toppings.includes("sausage") && this.toppings.includes("pepperoni")) {
   return cost += 3;
 }else if (this.toppings.includes("sausage")) {
@@ -15,9 +21,5 @@ if (this.toppings.includes("sausage") && this.toppings.includes("pepperoni")) {
 }else if (this.toppings.includes("pepperoni")) {
   return cost +=2;
 }
-if (this.size === "small") {
-  return cost;
-}
-
 
 }
