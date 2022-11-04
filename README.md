@@ -46,6 +46,12 @@ Code:
 const pizza = new Pizza("pepperoni", )
 pizza.findCost();
 Expected Output: 12
+
+Test: "It should add $3 to the price if both pepperoni and sausage are selected"
+Code: 
+const pizza = new Pizza(["pepperoni", "sausage"])
+pizza.findCost();
+Expected Output: $13
 ```
 ## Known Bugs
 
