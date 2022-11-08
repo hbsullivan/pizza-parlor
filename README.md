@@ -83,6 +83,11 @@ Code:
 const pizza = new Pizza(["veggies"])
 pizza.findCostToppings(10);
 Expected Output: 10.50
+
+Test: "It should show an error message when no toppings are selected with the checkboxes"
+Code: const pizza = new Pizza([], "small");
+pizza.findCostToppings(10);
+Expected Output: "Error"
 ```
 ## Known Bugs
 
