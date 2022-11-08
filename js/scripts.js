@@ -13,8 +13,8 @@ Pizza.prototype.findCostSize = function() {
     return cost += 5;
   }else if (this.size.includes("large")) {
     return cost += 10;
-  }
-  return cost;
+  }else
+    console.log("please select a size")
 }
 
 Pizza.prototype.findCostToppings = function (cost) {
@@ -66,9 +66,9 @@ function getSelected() {
  
 }
 
-// function errorMessage() {
-//   document.getElementById("error").removeAttribute("class");
-// }
+function errorMessage() {
+  document.getElementById("error").removeAttribute("class");
+}
 
 function handleSubmit(event) {
   event.preventDefault();

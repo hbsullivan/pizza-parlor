@@ -15,7 +15,7 @@
     <form id="order-form">
       <div class="toppings">
         <p>Please select your toppings:</p>
-        <!-- <p id="error">You must select a topping</p> -->
+        <p id="error">You must select toppings.</p>
         <label>
           <input type="checkbox" name="topping-option" value="no-toppings">
             No Toppings
@@ -34,8 +34,9 @@
         </label><br>
       </div><br><br>
       <div class="size">
-        <p>Please select your size:</p>
+        <p>Please select your size!</p>
         <select id="size-option">
+          <option></option>
           <option value="small">Small -- $10</option>
           <option value="medium">Medium -- $15</option>
           <option value="large">Large -- $20</option>
