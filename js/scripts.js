@@ -43,8 +43,8 @@ Pizza.prototype.findCostToppings = function (cost) {
   }else if (this.toppings.includes("no-toppings")) {
     let newCost = cost += 0;
     return newCost.toFixed(2);
-  }
-  return newCost;
+  }else
+  errorMessage();
 }
 
 //User Interface Logic
@@ -63,12 +63,8 @@ function getSelected() {
     } 
   }
   return pizza
- 
 }
 
-function errorMessage() {
-  document.getElementById("error").removeAttribute("class");
-}
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -91,6 +87,11 @@ function newOrder() {
   }
 }
 
+
+function errorMessage() {
+  document.getElementById("error").removeAttribute("id");
+  document.getElementById("final-price").setAttribute("class", "hidden");
+}
 
 window.addEventListener("load", function(){
   document.getElementById("order-form").addEventListener("submit", handleSubmit);
