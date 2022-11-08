@@ -52,6 +52,11 @@ const pizza = new Pizza(, "large")
 pizza.findCostSize();
 Expected Output: 20
 
+Test: "It should show an error message if no size is selected"
+Code: 
+const pizza = new Pizza(,undefined)
+pizza.findCostSize();
+Expected Output: "Please choose a size"
 
 Describe: Pizza.prototype.findCostToppings()
 
