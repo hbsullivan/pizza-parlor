@@ -91,7 +91,8 @@ Expected Output: "Error"
 ```
 ## Known Bugs
 
-* _Error handling is not working properly when the user doesn't select any toppings._
+* _Error message is showing with incorrect 'undefined' price when no checkboxes selected_
+* _Error message doesn't go away on resubmission_
 
 ## License
 

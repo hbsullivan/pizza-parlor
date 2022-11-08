@@ -18,7 +18,6 @@ Pizza.prototype.findCostSize = function() {
 }
 
 Pizza.prototype.findCostToppings = function (cost) {
-  let newCost
   if(this.toppings.includes("sausage") && this.toppings.includes("pepperoni") && this.toppings.includes("veggies")) {
     let newCost = cost += 3.5;
     return newCost.toFixed(2);
