@@ -42,8 +42,10 @@ Pizza.prototype.findCostToppings = function (cost) {
   }else if (this.toppings.includes("no-toppings")) {
     let newCost = cost += 0;
     return newCost.toFixed(2);
-  }else
-  errorMessage();
+  }else {
+  let newCost = null;
+  return newCost
+  }
 }
 
 //User Interface Logic
@@ -70,9 +72,15 @@ function handleSubmit(event) {
   pizza = getSelected();
   let sizeCost = pizza.findCostSize();
   let finalCost = pizza.findCostToppings(sizeCost);
+  // let errorDisplay = errorMessage();
+  if (finalCost === null){
+    errorMessage();
+  }else {
+  // document.getElementById("error").setAttribute("id", "error");
   document.getElementById("price").innerText = finalCost;
   document.getElementById("final-price").removeAttribute("class");
   pizza.toppings = [];
+ }
 } 
 
 function newOrder() {
@@ -85,7 +93,6 @@ function newOrder() {
     } 
   }
 }
-
 
 function errorMessage() {
   document.getElementById("error").removeAttribute("id");
