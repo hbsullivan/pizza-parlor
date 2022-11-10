@@ -72,11 +72,10 @@ function handleSubmit(event) {
   pizza = getSelected();
   let sizeCost = pizza.findCostSize();
   let finalCost = pizza.findCostToppings(sizeCost);
-  // let errorDisplay = errorMessage();
   if (finalCost === null){
     errorMessage();
   }else {
-  // document.getElementById("error").setAttribute("id", "error");
+  document.getElementById("error").setAttribute("class", "uhOh");
   document.getElementById("price").innerText = finalCost;
   document.getElementById("final-price").removeAttribute("class");
   pizza.toppings = [];
@@ -95,7 +94,7 @@ function newOrder() {
 }
 
 function errorMessage() {
-  document.getElementById("error").removeAttribute("id");
+  document.getElementById("error").removeAttribute("class");
   document.getElementById("final-price").setAttribute("class", "hidden");
 }
 

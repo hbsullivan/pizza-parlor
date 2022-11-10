@@ -91,8 +91,7 @@ Expected Output: "Error"
 ```
 ## Known Bugs
 
-* _Error message is showing with incorrect 'undefined' price when no checkboxes selected_
-* _Error message doesn't go away on resubmission_
+* _No known bugs_
 
 ## License
 

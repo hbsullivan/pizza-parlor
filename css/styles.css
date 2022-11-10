@@ -11,8 +11,11 @@
 }
 
 #error {
+  color: black;
+}
+
+.uhOh{
   display: none;
-  color: red;
 }
 
 .jumbotron {
