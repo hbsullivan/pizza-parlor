@@ -1,8 +1,8 @@
 // Business Logic 
 
-function Pizza() {
-  this.toppings = [];
-  this.size = [];
+function Pizza(size, toppings) {
+  this.toppings = [toppings];
+  this.size = size;
 }
 
 Pizza.prototype.findCostSize = function() {
@@ -52,15 +52,12 @@ Pizza.prototype.findCostToppings = function (cost) {
 
 
 function getSelected() {
-  let pizza = new Pizza();
-  const selectedSize = document.getElementById("size-option").value;
-  pizza.size = selectedSize;
-  pizza.toppings=[]
-  const selectedToppings = document.querySelectorAll("input[name=topping-option]:checked");
-  for (let i = 0; i < selectedToppings.length; i++) {
-    if (selectedToppings[i].checked) {
-      pizza.toppings.push(selectedToppings[i].value);
-      
+  const size = document.getElementById("size-option").value;
+  const toppings = document.querySelectorAll("input[name=topping-option]:checked");
+  let pizza = new Pizza(size, toppings);
+  for (let i = 0; i < toppings.length; i++) {
+    if (toppings[i].checked) {
+      pizza.toppings.push(toppings[i].value);
     } 
   }
   return pizza
