@@ -1,7 +1,7 @@
 // Business Logic 
 
 function Pizza(size, toppings) {
-  this.toppings = [toppings];
+  this.toppings = toppings;
   this.size = size;
 }
 
@@ -15,6 +15,10 @@ Pizza.prototype.findCostSize = function() {
     return cost += 10;
   }else
     console.log("please select a size")
+}
+
+Pizza.prototype.resetPizza = function() {
+  pizza.toppings = [];
 }
 
 Pizza.prototype.findCostToppings = function (cost) {
@@ -54,12 +58,13 @@ Pizza.prototype.findCostToppings = function (cost) {
 function getSelected() {
   const size = document.getElementById("size-option").value;
   const toppings = document.querySelectorAll("input[name=topping-option]:checked");
-  let pizza = new Pizza(size, toppings);
+  let toppingsArray = [];
   for (let i = 0; i < toppings.length; i++) {
     if (toppings[i].checked) {
-      pizza.toppings.push(toppings[i].value);
+      toppingsArray.push(toppings[i].value);
     } 
   }
+  let pizza = new Pizza(size, toppingsArray);
   return pizza
 }
 
@@ -75,7 +80,7 @@ function handleSubmit(event) {
   document.getElementById("error").setAttribute("class", "uhOh");
   document.getElementById("price").innerText = finalCost;
   document.getElementById("final-price").removeAttribute("class");
-  pizza.toppings = [];
+  pizza.resetPizza();
  }
 } 
 
